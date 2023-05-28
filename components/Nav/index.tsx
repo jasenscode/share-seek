@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { source_sans_pro } from '../../app/fonts';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   RiMenu4Line,
   RiCloseLine,
@@ -43,12 +43,6 @@ export const Navigation = () => {
   const handleToggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
-
-  // useEffect(() => {
-  //   fetch('http://localhost:7071/api/StockInfo?stock=A32PL')
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
 
   return (
     <Container>
