@@ -4,12 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { source_sans_pro } from '../../app/fonts';
 import { useState } from 'react';
-import {
-  RiMenu4Line,
-  RiCloseLine,
-  RiAddLine,
-  RiLoginCircleLine,
-} from 'react-icons/ri';
+import { RiMenu4Line, RiCloseLine, RiAddLine, RiLoginCircleLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons';
 
 import { Container } from '@components/Container';
@@ -47,10 +42,10 @@ export const Navigation = () => {
   return (
     <Container>
       <nav
-        className={`bg-violet fixed md:static left-0 right-0 top-0 p-6 ${
+        className={`fixed md:static left-0 right-0 top-0 p-6 ${
           source_sans_pro.variable
         } font-sans py-6 ${
-          menuOpen ? 'h-screen' : 'h-auto'
+          menuOpen ? 'h-screen bg-violet' : 'h-auto'
         } lg:h-auto flex flex-col justify-between lg:items-center lg:flex-row`}>
         <div className='text-floral-white flex justify-between items-center'>
           <Link
@@ -85,9 +80,7 @@ export const Navigation = () => {
         </ul>
 
         <div
-          className={`${
-            menuOpen ? 'flex' : 'hidden'
-          } text-white md:flex justify-evenly lg:gap-8`}>
+          className={`${menuOpen ? 'flex' : 'hidden'} text-white md:flex justify-evenly lg:gap-8`}>
           <Button
             variant='secondary'
             className='flex items-center gap-2'>
